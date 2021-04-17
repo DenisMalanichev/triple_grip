@@ -7,9 +7,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class Shtams implements Screen {
     private ScreenManager manager;
     private int a_shtam = 10000;
@@ -280,7 +277,7 @@ public class Shtams implements Screen {
             manager.font.setColor(0, 0, 1, 1);
             manager.font.draw(manager.batch, "enter", 500, 850);
         }
-        if(Gdx.input.getX() >= 10 && Gdx.input.getX() <= 140 && Gdx.input.getY() >= 0 && 1000 - Gdx.input.getY() <= 50) {
+        if(Gdx.input.getX() >= 10 && Gdx.input.getX() <= 240 && Gdx.input.getY() >= 0 && 1000 - Gdx.input.getY() <= 50) {
             manager.font.setColor(0, 1, 1, 1);
             manager.font.getData().setScale(2);
             manager.font.draw(manager.batch, "Tentative forecast", 10, 40);
@@ -297,23 +294,7 @@ public class Shtams implements Screen {
             manager.font.getData().setScale(2);
             manager.font.draw(manager.batch, "Tentative forecast", 10, 40);
         }
-        if(Gdx.input.getX() >= 10 && Gdx.input.getX() <= 140 && Gdx.input.getY() >= 0 && 1000 - Gdx.input.getY() <= 50) {
-            manager.font.setColor(0, 1, 1, 1);
-            manager.font.getData().setScale(2);
-            manager.font.draw(manager.batch, "Tentative forecast", 10, 40);
-            if(Gdx.input.isTouched()){
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                manager.setScreen(new Illness_chart(manager));
-            }
-        }else{
-            manager.font.setColor(0, 0, 1, 1);
-            manager.font.getData().setScale(2);
-            manager.font.draw(manager.batch, "Tentative forecast", 10, 40);
-        }
+
         if(Gdx.input.getX() >= 750 && Gdx.input.getX() <= 950 && Gdx.input.getY() >= 0 && 1000 - Gdx.input.getY() <= 50) {
             manager.font.setColor(0, 1, 1, 1);
             manager.font.getData().setScale(2);
